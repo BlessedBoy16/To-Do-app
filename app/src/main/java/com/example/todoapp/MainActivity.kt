@@ -37,37 +37,9 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            TodoAppTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting()
-                }
-            }
+
         }
     }
 }
 
-@Composable
-fun Greeting() {
-    LazyVerticalGrid(
-        columns = GridCells.Fixed(3),
-        horizontalArrangement = Arrangement.spacedBy(5.dp),
-        verticalArrangement = Arrangement.spacedBy(5.dp)
 
-    ){
-    items(count = 100){
-        Card(
-            modifier = Modifier
-                .fillMaxWidth()
-                .size(0.dp, 100.dp),
-            colors = CardDefaults.cardColors(),
-            border = BorderStroke(1.dp, color = MaterialTheme.colorScheme.surface)
-        ) {
-Text(text = "Title")
-        }
-    }
-    }
-}
